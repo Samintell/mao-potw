@@ -38,6 +38,12 @@
     <Compile Include="app\__init__.py" />
     <Compile Include="app\migrations\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="proboftheweek\apps.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="proboftheweek\views.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="proboftheweek\__init__.py" />
     <Compile Include="proboftheweek\settings.py" />
     <Compile Include="proboftheweek\urls.py" />
