@@ -60,8 +60,25 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="proboftheweek\" />
+    <Folder Include="proboftheweek\static\" />
+    <Folder Include="proboftheweek\static\assets\" />
+    <Folder Include="proboftheweek\static\assets\bootstrap\" />
+    <Folder Include="proboftheweek\static\assets\bootstrap\css\" />
+    <Folder Include="proboftheweek\static\assets\bootstrap\js\" />
+    <Folder Include="proboftheweek\static\assets\css\" />
+    <Folder Include="proboftheweek\static\assets\js\" />
+    <Folder Include="proboftheweek\static\NewFolder1\" />
+    <Folder Include="proboftheweek\templates\" />
+    <Folder Include="proboftheweek\templates\proboftheweek\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="proboftheweek\static\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="proboftheweek\static\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="proboftheweek\static\assets\css\Footer-Basic.css" />
+    <Content Include="proboftheweek\static\assets\css\styles.css" />
+    <Content Include="proboftheweek\static\assets\js\jquery.min.js" />
+    <Content Include="proboftheweek\templates\proboftheweek\index.html" />
+    <Content Include="proboftheweek\templates\proboftheweek\layout.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
