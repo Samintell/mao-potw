@@ -13,7 +13,18 @@ def index(request):
 
     return render(
         request,
+        "proboftheweek/index.html", 
+        {
+            'title': 'testme',
+            'message': 'sanity check'
+        })
+
+def test(request):
+    now = datetime.now()
+
+    return render(
+        request,
         "proboftheweek/layout.html", 
         {
-            'content': "<strong>Hello Django!</strong> on " + now.strftime("%A, %d %B, %Y at %X")
+            
         })
