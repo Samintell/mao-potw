@@ -3,7 +3,8 @@
 {% block content %}
 
 {% if act %}
-    <p>{ q.question_text }</p>
+    <p>{{ act_question.question_text }}</p>
+
 {% else %}
     <p>No Question available</p>
 {% endif %}

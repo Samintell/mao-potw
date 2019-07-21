@@ -13,8 +13,8 @@ from proboftheweek import views
 urlpatterns = [
     
     path('', views.index, name='index'),
-    path('home', views.index, name='home'),
-    path('test', views.active, name='active'),
+    path('home/', views.index, name='home'),
+    path('weekly/', views.weekly, name='weekly'),
     #path('contact/', views.contact, name='contact'),
     #path('about/', views.about, name='about'),
     #path('login/',

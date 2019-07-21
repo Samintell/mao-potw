@@ -24,10 +24,10 @@ def test(request):
             
         })
 
-def active(request):
+def weekly(request):
     now = datetime.now()
     for q in Question.objects.all():
-        if (now.day == q.active_date.day) and (now.month == q.active_date.month) and (now.year == q.active_date.year) and (now.hour < 18):
+        if (now.day == q.active_date.day) and (now.month == q.active_date.month) and (now.year == q.active_date.year) and (now.hour >= 18):
             return render(
                 request,
                 "proboftheweek/active.html", 

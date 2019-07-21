@@ -73,7 +73,6 @@
     <Folder Include="proboftheweek\static\assets\bootstrap\js\" />
     <Folder Include="proboftheweek\static\assets\css\" />
     <Folder Include="proboftheweek\static\assets\js\" />
-    <Folder Include="proboftheweek\static\NewFolder1\" />
     <Folder Include="proboftheweek\templates\" />
     <Folder Include="proboftheweek\templates\proboftheweek\" />
   </ItemGroup>
