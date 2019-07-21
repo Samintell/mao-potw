@@ -41,6 +41,12 @@
     <Compile Include="proboftheweek\apps.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="proboftheweek\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="proboftheweek\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="proboftheweek\views.py">
       <SubType>Code</SubType>
     </Compile>
@@ -77,6 +83,7 @@
     <Content Include="proboftheweek\static\assets\css\Footer-Basic.css" />
     <Content Include="proboftheweek\static\assets\css\styles.css" />
     <Content Include="proboftheweek\static\assets\js\jquery.min.js" />
+    <Content Include="proboftheweek\templates\proboftheweek\active.html" />
     <Content Include="proboftheweek\templates\proboftheweek\index.html" />
     <Content Include="proboftheweek\templates\proboftheweek\layout.html" />
     <Content Include="requirements.txt" />

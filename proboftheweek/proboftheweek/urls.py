@@ -14,7 +14,7 @@ urlpatterns = [
     
     path('', views.index, name='index'),
     path('home', views.index, name='home'),
-    path('test', views.test, name='test')
+    path('test', views.active, name='active'),
     #path('contact/', views.contact, name='contact'),
     #path('about/', views.about, name='about'),
     #path('login/',
@@ -30,6 +30,6 @@ urlpatterns = [
     #     ),
     #     name='login'),
     #path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     
 ]

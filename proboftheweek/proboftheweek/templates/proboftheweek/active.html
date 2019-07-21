@@ -1,0 +1,13 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+
+{% if act %}
+    <p>{ q.question_text }</p>
+{% else %}
+    <p>No Question available</p>
+{% endif %}
+
+
+
+{% endblock %}
