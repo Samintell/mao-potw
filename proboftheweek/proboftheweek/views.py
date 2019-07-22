@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect
 from datetime import datetime
-from .models import Question
+from .models import Question, Response
+
 
 def index(request):
     now = datetime.now()
@@ -42,6 +43,26 @@ def weekly(request):
                 'act': False,
             })
 
+def submit_ans(request):
+    q = get_object_or_404(Question, pk=request.POST['q_id'])
+    
+    try:
+        if request.POST['student_id'] == '':
+            return render(request, 'proboftheweek/active.html', {
+                'error_message': "You didn't provide Student ID",
+            })
+        elif request.POST['answer'] == '':
+            return render(request, 'proboftheweek/active.html', {
+                'error_message': "You didn't provide an answer",
+            })
+        r = Response(question = q, student_id = request.POST['student_id'].strip(), answer_text=request.POST['answer'].strip())
+    except (KeyError):
+        return render(request, 'proboftheweek/active.html', {
+            'error_message': "Invalid Submission",
+        })
+    else:
+        r.save()
+        return HttpResponseRedirect('../home/')
 
 
 
