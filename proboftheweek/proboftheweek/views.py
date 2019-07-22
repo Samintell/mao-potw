@@ -44,16 +44,24 @@ def weekly(request):
             })
 
 def submit_ans(request):
-    q = get_object_or_404(Question, pk=request.POST['q_id'])
-    
+    try:
+        q = get_object_or_404(Question, pk=request.POST['q_id'])
+    except:
+        return render(request, 'proboftheweek/index.html', {
+                'error_message': "Illegal Request",
+            })
     try:
         if request.POST['student_id'] == '':
             return render(request, 'proboftheweek/active.html', {
                 'error_message': "You didn't provide Student ID",
+                'act_question': q,
+                'act': True
             })
         elif request.POST['answer'] == '':
             return render(request, 'proboftheweek/active.html', {
                 'error_message': "You didn't provide an answer",
+                'act_question': q,
+                'act': True
             })
         r = Response(question = q, student_id = request.POST['student_id'].strip(), answer_text=request.POST['answer'].strip())
     except (KeyError):
