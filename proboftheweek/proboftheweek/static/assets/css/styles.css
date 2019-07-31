@@ -1,0 +1,31 @@
+#main-container {
+    margin:auto;
+    font-family:"Roboto", sans-serif;
+    max-width:960px;
+    background-color:#ffffff;
+    min-height:600px;
+    border-radius: 10px;
+    height:100%;
+    padding-top:50px;
+}
+
+body {
+    background-color:rgba(248, 100, 100, 0.92)
+}
+
+.arch-list {
+    font-size: 1.5em;
+    margin:auto;
+}
+
+.error-msg {
+    background-color: #FFBABA;
+}
+
+.navbar {
+    color: white;
+    background-color: rgba(101, 161, 234, 1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

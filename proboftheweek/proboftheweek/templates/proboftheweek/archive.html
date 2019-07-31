@@ -1,0 +1,16 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+    {% if error %}
+    <div class="card card-body bg-light error-msg"> {{ error_message }} </div>
+    {% endif %}
+    <ul class="" style="list-style: none; padding-left:0">
+        {% for question in past_questions_list %}
+
+        <li class="card card-body bg-light arch-list">
+            <a class="stretched-link" href="/archive/{{ question.id }}/">{{ question.active_date }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+    

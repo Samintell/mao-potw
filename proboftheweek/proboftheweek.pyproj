@@ -83,8 +83,10 @@
     <Content Include="proboftheweek\static\assets\css\styles.css" />
     <Content Include="proboftheweek\static\assets\js\jquery.min.js" />
     <Content Include="proboftheweek\templates\proboftheweek\active.html" />
+    <Content Include="proboftheweek\templates\proboftheweek\archived_q.html" />
     <Content Include="proboftheweek\templates\proboftheweek\index.html" />
     <Content Include="proboftheweek\templates\proboftheweek\layout.html" />
+    <Content Include="proboftheweek\templates\proboftheweek\archive.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

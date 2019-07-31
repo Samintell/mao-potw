@@ -16,6 +16,8 @@ urlpatterns = [
     path('home/', views.index, name='home'),
     path('weekly/', views.weekly, name='weekly'),
     path('submit/', views.submit_ans, name='submit'),
+    path('archive/', views.ArchiveView.as_view(), name='archive'),
+    path('archive/<int:question_id>/', views.arch_q, name='archive_q'),
     #path('contact/', views.contact, name='contact'),
     #path('about/', views.about, name='about'),
     #path('login/',
