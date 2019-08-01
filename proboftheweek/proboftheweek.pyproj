@@ -83,7 +83,10 @@
     <Content Include="proboftheweek\static\assets\css\styles.css" />
     <Content Include="proboftheweek\static\assets\js\jquery.min.js" />
     <Content Include="proboftheweek\templates\proboftheweek\active.html" />
+    <Content Include="proboftheweek\templates\proboftheweek\responses.html" />
+    <Content Include="proboftheweek\templates\proboftheweek\qlist.html" />
     <Content Include="proboftheweek\templates\proboftheweek\archived_q.html" />
+    <Content Include="proboftheweek\templates\proboftheweek\success.html" />
     <Content Include="proboftheweek\templates\proboftheweek\index.html" />
     <Content Include="proboftheweek\templates\proboftheweek\layout.html" />
     <Content Include="proboftheweek\templates\proboftheweek\archive.html" />
