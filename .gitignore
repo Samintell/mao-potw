@@ -343,3 +343,4 @@ healthchecksdb
 /proboftheweek.sln
 /env
 /proboftheweek.pyproj
+/secret_key.txt
