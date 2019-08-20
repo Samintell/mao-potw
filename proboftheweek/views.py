@@ -5,7 +5,12 @@ from .models import Question, Response
 from django.utils import timezone
 from django.views import generic
 import pytz
+import os
 
+def getTimeOfPOTW():
+    if 'PROBLEM_HOUR' in os.environ:
+        return os.environ['PROBLEM_HOUR']
+    return 18
 
 def index(request):
     now = datetime.now()
@@ -33,7 +38,7 @@ def weekly(request):
     print(now.strftime("%d-%b-%Y (%H:%M:%S.%f)"))
     print(datetime.now())
     for q in Question.objects.all():
-        if (now.day == q.active_date.day) and (now.month == q.active_date.month) and (now.year == q.active_date.year) and (now.hour == 18) and (now.minute < 15):
+        if (now.day == q.active_date.day) and (now.month == q.active_date.month) and (now.year == q.active_date.year) and (now.hour == getTimeOfPOTW()) and (now.minute < 15):
             return render(
                 request,
                 "proboftheweek/active.html", 
@@ -128,8 +133,8 @@ def answer(request):
     now = datetime.now()
     print(now.strftime("%d-%b-%Y (%H:%M:%S.%f)"))
     for q in Question.objects.all():
-        if (now.day == q.active_date.day) and (now.month == q.active_date.month) and (now.year == q.active_date.year) and (now.hour >= 18) :
-            if datetime(now.year, now.month, now.day, 6, 15) < now:
+        if (now.day == q.active_date.day) and (now.month == q.active_date.month) and (now.year == q.active_date.year) and (now.hour >= getTimeOfPOTW()) :
+            if datetime(now.year, now.month, now.day, getTimeOfPOTW(), 15) < now:
                 return render(
                     request,
                     "proboftheweek/archived_q.html", 
