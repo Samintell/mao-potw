@@ -1,0 +1,12 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+    {% autoescape off %}
+    <h4>Question</h4>
+    <p>{{ q.question_text }}</p>
+    <h4>Answer</h4>
+    <p>{{ q.answer }}</p>
+    <h4>Explaination</h4>
+    <p>{{ q.answer_explaination }} </p>
+    {% endautoescape %}
+{% endblock %}

@@ -1,0 +1,14 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+    {% if user.is_staff %}
+    <ul class="" style="list-style: none; padding-left:0">
+        {% for question in questions_list %}
+
+        <li class="card card-body bg-light arch-list">
+            <a class="stretched-link" href="/responses/{{ question.id }}/">{{ question.active_date }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+{% if error %}
+<div class="card card-body bg-light error-msg"> {{ error_message }} </div>
+{% endif %}
+<div class="text-center">
+    <h5>Welcome to Tompkins Mu Alpha Theta Problem of the Week</h5>
+    <a href="/weekly/" class="btn btn-info" role="button">Go to the POTW</a>
+</div>
+{% endblock %}

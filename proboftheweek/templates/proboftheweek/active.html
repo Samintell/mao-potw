@@ -1,0 +1,24 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+{% if error %}
+<div class="card card-body bg-light error-msg"> {{ error_message }} </div>
+{% endif %}
+{% if act %}
+    <p>{{ act_question.question_text|safe }}</p>
+    <form action="{% url 'submit' %}" method="post">
+    {% csrf_token %}
+        Student ID: <br />
+        <input type="text" name="student_id" /><br />
+        Answer: <br />
+        <input type="text" name="answer" />
+        <input type="hidden" name="q_id" value="{{ act_question.id }}"/>
+        <input type="submit" class="btn btn-info" value="submit" />
+    </form>
+{% else %}
+    <p>No Question available.</p>
+{% endif %}
+
+
+
+{% endblock %}

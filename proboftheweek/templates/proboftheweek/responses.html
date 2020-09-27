@@ -1,0 +1,16 @@
+﻿{% extends "proboftheweek/layout.html" %}
+
+{% block content %}
+    {% if user.is_staff %}
+    <h5>Answer = {{ answer }}</h5>
+    <ul class="" style="list-style: none; padding-left:0">
+        {% for response in responses_list %}
+
+        <li class="card card-body bg-light arch-list">
+            {{ response }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}
+    

@@ -339,3 +339,8 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /proboftheweek/env
+/proboftheweek/secret_key.txt
+/proboftheweek.sln
+/env
+/proboftheweek.pyproj
+/secret_key.txt
